@@ -129,6 +129,9 @@ function slideShow(){
 showSlides(slideIndex);
 
 // Next/previous controls
+
+//syntax in event handler is wrong, or not feeding the correct information into the function
+//cannot find plus or current slide
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -154,6 +157,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 }
-event.click(currentSlide());
+event.click(currentSlide(slideIndex));
 
 
